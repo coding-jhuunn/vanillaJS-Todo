@@ -1,0 +1,140 @@
+:root {
+  --primary: rgb(255, 143, 143);
+  --secondary: rgb(238, 242, 150);
+  --tertiary: rgb(154, 222, 123);
+  --default: rgb(80, 141, 105);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--secondary);
+  font-family: "Poppins", sans-serif;
+}
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  border: none;
+  background: white;
+  height: 3.5rem;
+}
+form button {
+  background: var(--default);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: var(--default);
+  color: white;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: var(--default);
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 10rem;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: var(--default);
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.container {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+.filter-todo {
+  padding: 1rem;
+}
+.todo li {
+  font-size: 1rem;
+  flex: 1;
+  min-width: 200px;
+  margin-left: 20px;
+}
+
+.delete-btn,
+.complete-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background-color: var(--tertiary);
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.completed {
+  opacity: 0.5;
+}
+.header {
+  height: 100%;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+.errorType {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 1rem;
+}
